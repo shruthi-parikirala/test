@@ -2,7 +2,7 @@
 - hosts: webserver
   remote_user: jenkins
   become: true
-  become_method: sudo
+  become_user: root
   tasks:
     - name: Install pip
       yum: name=python-pip state=present
